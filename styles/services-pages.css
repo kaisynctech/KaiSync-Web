@@ -526,6 +526,46 @@
 }
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 6.2rem 0 3.2rem;
+    }
+
+    .page-title {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .service-detail-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .service-features {
+        text-align: left;
+    }
+
+    .service-number {
+        font-size: 2.4rem;
+    }
+
+    .service-detail-title {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .service-detail-visual-inner {
+        padding: 1.4rem;
+    }
+
     .showcase-split {
         grid-template-columns: 1fr;
     }
