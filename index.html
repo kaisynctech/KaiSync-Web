@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KaiSync Tech Solutions – Websites, Web Apps, Automation & Marketing</title>
+    <title>KaiSync Tech Solutions – Websites, Automation & Marketing</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +17,18 @@
 
     <nav class="navbar" id="navbar">
         <div class="container nav-inner">
-            <a href="#home" class="logo-wrap">
+            <a href="index.html" class="logo-wrap">
                 <img src="assets/logo.png" alt="KaiSync Tech Solutions" class="logo-img" onerror="this.style.display='none'">
                 <span class="logo-text">KaiSync Tech Solutions</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            <a href="#contact" class="btn btn-nav">Get a Quote</a>
+            <a href="contact.html" class="btn btn-nav">Get a Quote</a>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -50,14 +51,23 @@
             </div>
             <div class="container hero-inner">
                 <div class="hero-content">
-                    <p class="hero-eyebrow">Tech solutions that scale</p>
-                    <h1 class="hero-title">We build <span class="gradient-text">websites</span>, <span class="gradient-text">web apps</span>, <span class="gradient-text">automation</span> &amp; <span class="gradient-text">marketing</span> that get results.</h1>
-                    <p class="hero-subtitle">From sleek sites to powerful automation and scroll-stopping visuals—KaiSync turns your ideas into digital reality.</p>
-                    <p class="hero-industries">Any industry—corporate, construction, forex trading, health, beauty, and more. <strong>We'll sort you out.</strong></p>
+                    <p class="hero-eyebrow">DESIGN · AUTOMATION · MARKETING</p>
+                    <h1 class="hero-title">
+                        Ship a <span class="gradient-text">premium web presence</span><br>
+                        that actually wins you clients.
+                    </h1>
+                    <p class="hero-subtitle">
+                        KaiSync designs and builds conversion‑focused websites, smart automations and scroll‑stopping marketing assets
+                        so your business looks world‑class and runs smoother—without you wrestling the tech.
+                    </p>
                     <div class="hero-buttons">
-                        <a href="#services" class="btn btn-primary">Explore services</a>
-                        <a href="#contact" class="btn btn-secondary">Talk to us</a>
+                        <a href="contact.html" class="btn btn-primary">Start a project</a>
+                        <a href="services.html" class="btn btn-secondary">View what we can build</a>
                     </div>
+                    <p class="hero-industries">
+                        <strong>Built for real businesses.</strong> From corporate and construction to forex, health and beauty—
+                        we translate your offer into a modern SaaS‑level experience.
+                    </p>
                 </div>
                 <div class="hero-media">
                     <img src="assets/logo.png" alt="KaiSync Tech Solutions" class="hero-logo">
@@ -75,63 +85,85 @@
         <!-- Services -->
         <section id="services" class="services">
             <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">What we offer</p>
-                    <h2 class="section-title">Services that <span class="gradient-text">drive growth</span></h2>
-                    <p class="section-desc">Web, automation, and marketing—all under one roof. No matter your sector—corporate, construction, forex, health, beauty, and more—we'll sort you out.</p>
+                <div class="section-header section-header-left">
+                    <p class="section-eyebrow">WHAT WE OFFER</p>
+                    <h2 class="section-title section-title-large">Our Services</h2>
+                    <p class="section-desc">Comprehensive digital solutions tailored to your business – from high‑impact websites to powerful automation and scroll‑stopping marketing visuals.</p>
                 </div>
                 <div class="services-grid">
-                    <article class="service-card" data-tilt>
+                    <article class="service-card" data-tilt data-service="websites">
                         <a href="services/websites.html" class="service-card-link">
                             <div class="service-card-glow"></div>
-                            <div class="service-icon-wrap"><span class="service-icon">🌐</span></div>
-                            <h3>Websites</h3>
-                            <p>Fast, responsive sites that convert. From landing pages to full business sites—clean code and modern design.</p>
-                            <span class="service-link">See our websites →</span>
+                            <h3>
+                                <span class="service-icon-wrap"><span class="service-icon">🌐</span></span>
+                                Websites
+                            </h3>
+                            <p>Fast, responsive sites that convert – with contact forms wired to your email and WhatsApp. Perfect for businesses that need a professional online home.</p>
+                            <span class="service-link">Learn more about websites →</span>
                         </a>
                         <a href="#contact" class="service-link service-link-sub">Get a quote</a>
                     </article>
-                    <article class="service-card" data-tilt>
-                        <a href="services/web-apps.html" class="service-card-link">
-                            <div class="service-card-glow"></div>
-                            <div class="service-icon-wrap"><span class="service-icon">⚡</span></div>
-                            <h3>Web Apps</h3>
-                            <p>Custom dashboards, portals, and SaaS-style apps. Built to scale and easy to maintain.</p>
-                            <span class="service-link">See our web apps →</span>
-                        </a>
-                        <a href="#contact" class="service-link service-link-sub">Get a quote</a>
-                    </article>
-                    <article class="service-card" data-tilt>
+                    <article class="service-card" data-tilt data-service="automation">
                         <a href="services/automation.html" class="service-card-link">
                             <div class="service-card-glow"></div>
-                            <div class="service-icon-wrap"><span class="service-icon">🤖</span></div>
-                            <h3>Automation</h3>
-                            <p>Save hours every week. Lead capture, invoicing, CRM sync, report pipelines, and workflow bots.</p>
+                            <h3>
+                                <span class="service-icon-wrap"><span class="service-icon">🤖</span></span>
+                                Automation
+                            </h3>
+                            <p>Save hours every week with smart workflows. Lead capture, invoicing, CRM sync, report pipelines, and workflow bots designed around how you work.</p>
                             <ul class="service-highlights">
-                                <li>Lead & form → CRM automation</li>
-                                <li>Invoice & payment reminders</li>
-                                <li>Report & data pipeline automation</li>
-                                <li>Chatbots & support workflows</li>
+                                <li>Lead &amp; form → CRM automation</li>
+                                <li>Invoice &amp; payment reminders</li>
+                                <li>Report &amp; data pipeline automation</li>
+                                <li>Chatbots &amp; support workflows</li>
                             </ul>
-                            <span class="service-link">See our automation →</span>
+                            <span class="service-link">View automation ideas →</span>
                         </a>
                         <a href="#contact" class="service-link service-link-sub">Get a quote</a>
                     </article>
-                    <article class="service-card" data-tilt>
+                    <article class="service-card" data-tilt data-service="marketing">
                         <a href="services/marketing.html" class="service-card-link">
                             <div class="service-card-glow"></div>
-                            <div class="service-icon-wrap"><span class="service-icon">📣</span></div>
-                            <h3>Marketing</h3>
-                            <p>Posters, animated videos, and animated graphics that stop the scroll and get clicks.</p>
+                            <h3>
+                                <span class="service-icon-wrap"><span class="service-icon">📣</span></span>
+                                Marketing
+                            </h3>
+                            <p>Posters, animated videos, and graphics that stop the scroll and get clicks. AI‑powered marketing videos from around R500 – R1 000 per video, depending on length.</p>
                             <ul class="service-highlights">
-                                <li>Posters & static visuals</li>
+                                <li>Posters &amp; static visuals</li>
                                 <li>Animated marketing videos</li>
                                 <li>Animated marketing images</li>
                             </ul>
-                            <span class="service-link">See our marketing work →</span>
+                            <span class="service-link">See marketing examples →</span>
                         </a>
                         <a href="#contact" class="service-link service-link-sub">Get a quote</a>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service details modal -->
+        <div id="serviceModal" class="service-modal" aria-hidden="true">
+            <div class="service-modal-backdrop"></div>
+            <div class="service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+                <button type="button" id="serviceModalClose" class="service-modal-close" aria-label="Close service details">×</button>
+                <h3 id="serviceModalTitle" class="service-modal-title"></h3>
+                <p id="serviceModalBody" class="service-modal-body"></p>
+                <a id="serviceModalLink" href="#" class="btn btn-primary service-modal-link">View full details</a>
+            </div>
+        </div>
+
+        <!-- Wide CTA inspired by MCMBhele layout -->
+        <section class="cta-wide">
+            <div class="container">
+                <div class="cta-wide-inner">
+                    <p class="section-eyebrow">READY TO LEVEL UP</p>
+                    <h2 class="section-title">Ready to transform your <span class="gradient-text">business online</span>?</h2>
+                    <p class="section-desc">Let’s discuss your vision and turn it into a fast, modern digital experience – whether that’s a new website, automation, or marketing visuals.</p>
+                    <div class="cta-wide-actions">
+                        <a href="#contact" class="btn btn-primary">Get started</a>
+                        <a href="services/websites.html" class="btn btn-secondary">View portfolio</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,22 +171,22 @@
         <!-- About -->
         <section id="about" class="about">
             <div class="container">
+                <p class="section-eyebrow about-eyebrow">Who we are</p>
                 <div class="about-inner">
                     <div class="about-content">
-                        <p class="section-eyebrow">Who we are</p>
                         <h2 class="section-title">Tech partners who <span class="gradient-text">sync</span> with your goals</h2>
-                        <p class="about-desc">KaiSync Tech Solutions blends design, development, and automation so your business runs smoother and looks sharper. We build websites and web apps that perform, automate the repetitive work that slows you down, and create marketing visuals that actually get noticed. It doesn't matter your industry—corporate, construction, forex trading, health, beauty, and more—<strong>we'll sort you out.</strong></p>
+                        <p class="about-desc">KaiSync Tech Solutions blends design, development, and automation so your business runs smoother and looks sharper. We build websites that perform, automate the repetitive work that slows you down, and create marketing visuals that actually get noticed. It doesn't matter your industry—corporate, construction, forex trading, health, beauty, and more—<strong>we'll sort you out.</strong></p>
                         <div class="about-stats">
                             <div class="stat"><span class="stat-num">100+</span><span class="stat-label">Projects</span></div>
                             <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Support</span></div>
                             <div class="stat"><span class="stat-num">Fast</span><span class="stat-label">Delivery</span></div>
                         </div>
-                        <a href="#contact" class="btn btn-primary">Work with us</a>
+                        <a href="contact.html" class="btn btn-primary">Work with us</a>
                     </div>
                     <div class="about-visual">
                         <div class="about-card">
                             <span class="about-card-line"></span>
-                            <p>Websites · Web Apps · Automation · Marketing</p>
+                            <p>Websites · Automation · Marketing</p>
                             <p class="about-card-industries">Any industry—corporate, construction, forex, health, beauty &amp; more.</p>
                         </div>
                     </div>
@@ -162,18 +194,84 @@
             </div>
         </section>
 
-        <!-- Contact -->
+        <!-- Testimonials / social proof -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-inner">
+                    <div class="testimonial-intro section-header">
+                        <p class="section-eyebrow">Clients & results</p>
+                        <h2 class="section-title">Teams trust KaiSync with their digital presence</h2>
+                        <p>From small businesses getting online for the first time to established brands modernising their web presence, we focus on clean builds that feel premium and deliver leads.</p>
+                    </div>
+                    <div class="testimonial-carousel">
+                        <div class="testimonial-track">
+                            <article class="testimonial-card">
+                            <p class="testimonial-quote">“KaiSync turned our simple idea into a polished website that actually converts. The structure is clear, the site feels fast, and enquiries increased immediately.”</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Business Owner</span>
+                                <span class="testimonial-role">Service-based company</span>
+                                <span class="testimonial-pill">Website redesign</span>
+                            </div>
+                        </article>
+                            <article class="testimonial-card">
+                            <p class="testimonial-quote">“Their automation work quietly removed a lot of manual admin for our team. Leads flow into our system, and follow-ups happen automatically in the background.”</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Operations Lead</span>
+                                <span class="testimonial-role">Consulting firm</span>
+                                <span class="testimonial-pill">Lead & workflow automation</span>
+                            </div>
+                        </article>
+                            <article class="testimonial-card">
+                            <p class="testimonial-quote">“The visuals KaiSync created helped us look as professional online as we are offline. The site, content and marketing pieces all feel like one cohesive brand.”</p>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Marketing Manager</span>
+                                <span class="testimonial-role">Growing brand</span>
+                                <span class="testimonial-pill">Website + marketing visuals</span>
+                            </div>
+                        </article>
+                            <!-- Duplicate three to make six for the carousel -->
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">“Our online presence finally matches the quality of our service. Clients regularly comment on how professional the site feels.”</p>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-name">Company Director</span>
+                                    <span class="testimonial-role">Professional services</span>
+                                    <span class="testimonial-pill">Full website build</span>
+                                </div>
+                            </article>
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">“From first brief to delivery, KaiSync were responsive and clear. The automations they set up quietly save us time every single day.”</p>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-name">Team Lead</span>
+                                    <span class="testimonial-role">Operations team</span>
+                                    <span class="testimonial-pill">Workflow automation</span>
+                                </div>
+                            </article>
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">“Their marketing visuals helped us stand out in a crowded space. Everything—from colours to layout—feels consistent with our brand.”</p>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-name">Brand Owner</span>
+                                    <span class="testimonial-role">E‑commerce business</span>
+                                    <span class="testimonial-pill">Marketing visuals</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact teaser linking to full contact page -->
         <section id="contact" class="contact">
             <div class="container">
+                <p class="section-eyebrow contact-eyebrow">Get in touch</p>
                 <div class="contact-inner">
                     <div class="contact-info">
-                        <p class="section-eyebrow">Get in touch</p>
                         <h2 class="section-title">Let's <span class="gradient-text">build</span> something</h2>
-                        <p class="contact-desc">Tell us about your project—websites, web apps, automation, or marketing. We’ll get back quickly.</p>
+                        <p class="contact-desc">Tell us about your project—websites, automation, or marketing. We’ll get back quickly.</p>
                         <div class="contact-details">
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <div><strong>Email</strong><br>hello@kaisync.com</div>
+                                    <div><strong>Email</strong><br>kaisynctech@gmail.com</div>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">💬</span>
@@ -181,18 +279,10 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="4" placeholder="What do you need? (website, app, automation, marketing)" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send message</button>
-                    </form>
+                    <div class="contact-form">
+                      
+                        <a href="contact.html" class="btn btn-primary btn-block">Go to contact page</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,22 +291,80 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <a href="#home" class="footer-logo">
-                    <img src="assets/logo.png" alt="KaiSync" class="footer-logo-img">
-                    <span class="logo-text">KaiSync Tech Solutions</span>
-                </a>
-                <ul class="footer-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="KaiSync" class="footer-logo-img">
+                        <span class="logo-text">KaiSync Tech Solutions</span>
+                    </a>
+                    <p class="footer-tagline">Design · Automation · Marketing that helps your business look and feel world‑class.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick links</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-list">
+                        <li><a href="services/websites.html">Websites</a></li>
+                        <li><a href="services/automation.html">Automation</a></li>
+                        <li><a href="services/marketing.html">Marketing visuals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-list footer-contact">
+                        <li><span>📧</span><a href="mailto:kaisynctech@gmail.com">kaisynctech@gmail.com</a></li>
+                        <li><span>📍</span><span>South Africa · Remote friendly</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 KaiSync Tech Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div class="floating-actions">
+        <button id="whatsappFab" class="fab fab-whatsapp" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path fill="currentColor" d="M16 3C9.4 3 4 8.2 4 14.7c0 2.5.8 4.8 2.3 6.7L4 29l7-2.3c1.8 1 3.8 1.5 5.9 1.5 6.6 0 12-5.2 12-11.7C28.9 8.2 22.6 3 16 3Zm0 20.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.2 1.4 1.4-4.1-.3-.4c-1.3-1.6-2-3.5-2-5.5C5.5 9.1 10.2 5 16 5c5.6 0 10.2 4.1 10.2 9.2 0 5.1-4.6 9.5-10.2 9.5Zm5.3-7.1c-.3-.2-1.7-.9-1.9-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.6.2-.2.3-.4.4-.6.1-.2.1-.3.2-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.5.7.3 1.3.5 1.8.6.8.2 1.5.2 2 .1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.1-1.3-.1-.3-.3-.4-.6-.6Z"/>
+            </svg>
+        </button>
+        <button id="chatbotFab" class="fab fab-chat" aria-label="Open KaiSync assistant">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path fill="currentColor" d="M6 6h20v13H9l-5 5V6Zm2 2v11.17L9.17 18H24V8Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div id="chatbotWidget" class="chatbot" aria-live="polite">
+        <div class="chatbot-header">
+            <div class="chatbot-header-left">
+                <span class="chatbot-title">KaiSync assistant</span>
+                <span class="chatbot-subtitle">Ask about websites, automation or marketing</span>
+                <span class="chatbot-status-pill">Typically replies within a day</span>
+            </div>
+            <button id="chatbotClose" class="chatbot-close-btn" type="button" aria-label="Close chat">×</button>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbotMessages" class="chatbot-messages"></div>
+            <div class="chatbot-quick">
+                <button class="chatbot-chip" data-prompt="I need a new business website.">New business website</button>
+                <button class="chatbot-chip" data-prompt="I want to automate lead capture and follow-ups.">Automate my leads</button>
+                <button class="chatbot-chip" data-prompt="I need marketing visuals for an upcoming campaign.">Marketing visuals</button>
+            </div>
+        </div>
+        <form id="chatbotForm" class="chatbot-input">
+            <input id="chatbotInput" type="text" placeholder="Type a question or short brief..." autocomplete="off" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>

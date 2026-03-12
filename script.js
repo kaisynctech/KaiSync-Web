@@ -10,6 +10,14 @@
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
     const contactForm = document.getElementById('contactForm');
+    const whatsappFab = document.getElementById('whatsappFab');
+    const chatbotFab = document.getElementById('chatbotFab');
+    const chatbotEl = document.getElementById('chatbotWidget');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotForm = document.getElementById('chatbotForm');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotChips = document.querySelectorAll('.chatbot-chip');
 
     // Navbar scroll effect
     function onScroll() {
@@ -43,7 +51,7 @@
         });
     });
 
-    // Update active nav on scroll
+    // Update active nav on scroll (only for same-page hash links)
     const sections = document.querySelectorAll('section[id]');
     function updateActiveNav() {
         const scrollY = window.scrollY + 120;
@@ -56,8 +64,10 @@
             }
         });
         navLinks.forEach(function (link) {
+            const href = link.getAttribute('href') || '';
+            if (!href.startsWith('#')) return; // keep multi-page active state from HTML
             link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
+            if (href === '#' + current) {
                 link.classList.add('active');
             }
         });
@@ -95,6 +105,88 @@
         });
     }
 
+    // WhatsApp quick-chat
+    if (whatsappFab) {
+        const whatsappUrl = 'https://wa.me/?text=' +
+            encodeURIComponent('Hi KaiSync Tech Solutions, I would like to talk about a website / automation / marketing project.');
+        whatsappFab.addEventListener('click', function () {
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    // Simple onsite chatbot
+    function toggleChatbot(open) {
+        if (!chatbotEl) return;
+        if (open === undefined) {
+            chatbotEl.classList.toggle('open');
+        } else if (open) {
+            chatbotEl.classList.add('open');
+        } else {
+            chatbotEl.classList.remove('open');
+        }
+    }
+
+    if (chatbotFab) {
+        chatbotFab.addEventListener('click', function () {
+            toggleChatbot();
+        });
+    }
+
+    if (chatbotClose) {
+        chatbotClose.addEventListener('click', function () {
+            toggleChatbot(false);
+        });
+    }
+
+    function appendMessage(text, type) {
+        if (!chatbotMessages) return;
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg ' + (type === 'user' ? 'chat-msg-user' : 'chat-msg-bot');
+        msg.textContent = text;
+        chatbotMessages.appendChild(msg);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function botReply(input) {
+        const lower = input.toLowerCase();
+        if (lower.includes('website')) {
+            appendMessage('Great – for websites we usually start with your goals, pages you need, and any examples you like. You can also tell us which industry you\'re in.', 'bot');
+        } else if (lower.includes('autom') || lower.includes('workflow') || lower.includes('lead')) {
+            appendMessage('Automation projects often start with a simple question: what are you doing repeatedly that a system could handle? Lead capture, CRM sync, invoices and reports are common wins.', 'bot');
+        } else if (lower.includes('market') || lower.includes('poster') || lower.includes('video')) {
+            appendMessage('For marketing visuals we can help with posters, animated videos and animated images that match your brand and campaigns.', 'bot');
+        } else if (lower.includes('price') || lower.includes('cost') || lower.includes('quote')) {
+            appendMessage('Pricing depends on scope, but we can give you a clear quote once we know what you need. Share some detail here or use the main contact form.', 'bot');
+        } else {
+            appendMessage('Thanks for the message. Share what you have in mind for websites, automation or marketing and we\'ll follow up with specific ideas.', 'bot');
+        }
+    }
+
+    if (chatbotForm && chatbotInput && chatbotMessages) {
+        // Initial greeting
+        appendMessage('Hi, I\'m the KaiSync assistant. Ask about websites, automation, or marketing – or tell me briefly what you need.', 'bot');
+
+        chatbotForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const value = chatbotInput.value.trim();
+            if (!value) return;
+            appendMessage(value, 'user');
+            chatbotInput.value = '';
+            setTimeout(function () { botReply(value); }, 250);
+        });
+    }
+
+    if (chatbotChips && chatbotChips.length && chatbotInput && chatbotForm) {
+        chatbotChips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+                const text = chip.dataset.prompt || chip.textContent || '';
+                if (!text) return;
+                chatbotInput.value = text;
+                chatbotForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+            });
+        });
+    }
+
     // Reveal on scroll (Intersection Observer)
     const revealOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
     const revealObserver = new IntersectionObserver(function (entries) {
@@ -105,9 +197,31 @@
         });
     }, revealOptions);
 
-    document.querySelectorAll('.service-card, .about-content, .about-card, .section-header').forEach(function (el) {
+    document.querySelectorAll('.service-card, .about-content, .about-card, .section-header, .testimonial-card').forEach(function (el) {
         revealObserver.observe(el);
     });
+
+    // Portfolio gallery filters (MCMBhele-style)
+    const portfolioFilterBtns = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-gallery-item');
+
+    if (portfolioFilterBtns.length && portfolioItems.length) {
+        portfolioFilterBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                portfolioFilterBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                const filter = btn.dataset.filter || 'all';
+                portfolioItems.forEach(function (item) {
+                    const category = item.dataset.category || '';
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 
     // Parallax hero (subtle)
     window.addEventListener('scroll', function () {
