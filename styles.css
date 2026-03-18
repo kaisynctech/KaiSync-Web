@@ -1308,18 +1308,18 @@ body {
     position: fixed;
     right: 1.5rem;
     left: auto;
-    bottom: 1.5rem;
+    bottom: 5.8rem;
     z-index: 1100;
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
 }
 
-/* Zapier popup launcher positioning (chatbot above WhatsApp) */
+/* Zapier popup launcher positioning (WhatsApp above chatbot) */
 zapier-interfaces-chatbot-embed {
     position: fixed;
     right: 1.5rem;
-    bottom: 5.8rem;
+    bottom: 1.5rem;
     z-index: 1101;
 }
 
@@ -1517,7 +1517,7 @@ zapier-interfaces-chatbot-embed {
     .floating-actions {
         right: 1rem;
         left: auto;
-        bottom: 1rem;
+        bottom: 5.6rem;
     }
     .chatbot {
         right: 1rem;
@@ -1527,7 +1527,7 @@ zapier-interfaces-chatbot-embed {
 
     zapier-interfaces-chatbot-embed {
         right: 1rem;
-        bottom: 5.6rem;
+        bottom: 1rem;
     }
 }
 
