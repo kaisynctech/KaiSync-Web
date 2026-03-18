@@ -1256,6 +1256,18 @@ body {
     gap: 1.25rem;
 }
 
+.contact-form zapier-interfaces-page-embed {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+@media (max-width: 640px) {
+    .contact-form zapier-interfaces-page-embed {
+        height: 680px !important;
+    }
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
