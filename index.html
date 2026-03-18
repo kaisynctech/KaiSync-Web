@@ -336,36 +336,10 @@
                 <path fill="currentColor" d="M16 3C9.4 3 4 8.2 4 14.7c0 2.5.8 4.8 2.3 6.7L4 29l7-2.3c1.8 1 3.8 1.5 5.9 1.5 6.6 0 12-5.2 12-11.7C28.9 8.2 22.6 3 16 3Zm0 20.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.2 1.4 1.4-4.1-.3-.4c-1.3-1.6-2-3.5-2-5.5C5.5 9.1 10.2 5 16 5c5.6 0 10.2 4.1 10.2 9.2 0 5.1-4.6 9.5-10.2 9.5Zm5.3-7.1c-.3-.2-1.7-.9-1.9-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.6.2-.2.3-.4.4-.6.1-.2.1-.3.2-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.5.7.3 1.3.5 1.8.6.8.2 1.5.2 2 .1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.1-1.3-.1-.3-.3-.4-.6-.6Z"/>
             </svg>
         </button>
-        <button id="chatbotFab" class="fab fab-chat" aria-label="Open KaiSync assistant">
-            <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path fill="currentColor" d="M6 6h20v13H9l-5 5V6Zm2 2v11.17L9.17 18H24V8Z"/>
-            </svg>
-        </button>
     </div>
 
-    <div id="chatbotWidget" class="chatbot" aria-live="polite">
-        <div class="chatbot-header">
-            <div class="chatbot-header-left">
-                <span class="chatbot-title">KaiSync assistant</span>
-                <span class="chatbot-subtitle">Ask about websites, automation or marketing</span>
-                <span class="chatbot-status-pill">Typically replies within a day</span>
-            </div>
-            <button id="chatbotClose" class="chatbot-close-btn" type="button" aria-label="Close chat">×</button>
-        </div>
-        <div class="chatbot-body">
-            <div id="chatbotMessages" class="chatbot-messages"></div>
-            <div class="chatbot-quick">
-                <button class="chatbot-chip" data-prompt="I need a new business website.">New business website</button>
-                <button class="chatbot-chip" data-prompt="I want to automate lead capture and follow-ups.">Automate my leads</button>
-                <button class="chatbot-chip" data-prompt="I need marketing visuals for an upcoming campaign.">Marketing visuals</button>
-            </div>
-        </div>
-        <form id="chatbotForm" class="chatbot-input">
-            <input id="chatbotInput" type="text" placeholder="Type a question or short brief..." autocomplete="off" />
-            <button type="submit">Send</button>
-        </form>
-    </div>
-
+    <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="cmmvsacsm002qtq5f04vu93p2"></zapier-interfaces-chatbot-embed>
+    <script async type="module" src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
